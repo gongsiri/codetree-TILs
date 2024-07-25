@@ -15,20 +15,20 @@ int main() {
         arr2[i] = new int[m];
     }
 
-    for(int i=0; i<4; i++){
-        for(int j=0; j<4; j++){
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
             cin>>arr1[i][j];
         }
     }
 
-    for(int i=0; i<4; i++){
-        for(int j=0; j<4; j++){
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
             cin>>arr2[i][j];
         }
     }
 
-    for(int i=0; i<4; i++){
-        for(int j=0; j<4; j++){
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
             if(arr1[i][j] == arr2[i][j]){
                 cout<<0<<" ";
             }else{
