@@ -11,6 +11,12 @@ int main() {
         cin>>arr[i];
     }
     sort(arr,arr+2*n);
-    cout<<arr[0] + arr[2*n];
+    int max_num = 0;
+    for(int i = 0 ; i < n ; i++)
+    {
+        max_num = max(max_num, arr[i]+arr[2*n-1-i]);
+    }
+    
+    cout << max_num;
     return 0;
 }
