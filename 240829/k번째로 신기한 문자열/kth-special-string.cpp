@@ -14,9 +14,19 @@ int main() {
 
     for(int i=0; i<n; i++){
         cin>>s;
-        if(s.find(t) != string::npos){
-            ansArr.push_back(s);
+        bool flg = true;
+        for(int j = 0 ; j < t.length() ; j++)
+        {
+            if(s[j] != t[j])
+            {
+                flg = false;
+                break;
+            }
         }
+        if(flg)
+        {
+            ansArr.push_back(s);
+        }        
     }
     
     sort(ansArr.begin(),ansArr.end());
