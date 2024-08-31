@@ -24,7 +24,7 @@ int main() {
     Practice practice = Practice(secret, place,time);
     cout<<"secret code : "<<practice.secret<<"\n";
     cout<<"meeting point : "<<practice.place<<"\n";
-    cout<<"time  : "<<practice.time<<"\n";
+    cout<<"time : "<<practice.time<<"\n";
 
     return 0;
 }
