@@ -12,7 +12,7 @@ int main() {
     }
     for(int i=0; i<n; i++){
         if((i+1)%2!=0){
-            sort(arr,arr+i);
+            sort(arr,arr+i+1);
             cout<<arr[i/2]<<" ";
         }
     }
