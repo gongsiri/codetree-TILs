@@ -8,7 +8,10 @@ string word1;
 string word2;
 
 bool isSame(string a, string b){
-    for(int i=0; i<a.length(); i++){
+    int l = a.length();
+    if(b.length()>l)
+        l = b.length();
+    for(int i=0; i<l; i++){
         if(a[i]!=b[i])
             return false;
     }
