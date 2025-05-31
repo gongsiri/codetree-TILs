@@ -23,7 +23,10 @@ class Point{
 };
 
 bool cmp(const Point &a, const Point &b){
-    return abs(a.x)+abs(a.y) < abs(b.x)+abs(b.y);
+    int distanceA = abs(a.x)+abs(a.y);
+    int distanceB = abs(b.x)+abs(b.y);
+    if(distanceA == distanceB) return a.number < b.number;
+    return distanceA < distanceB;
 }
 
 int main() {
