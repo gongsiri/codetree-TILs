@@ -22,7 +22,7 @@ int main() {
     sort(B,B+n);
 
     for(int i=0; i<n; i++){
-        if(A[n]==B[n])
+        if(A[i]==B[i])
             count++;
     }
 
