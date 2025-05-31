@@ -12,7 +12,10 @@ int main() {
 
     while(true){
         if(day == a && hour == b && minute ==c) break;
-        if(day > a || (day==a && hour>b) || (day==a && hour==b && minute>c)) return -1;
+        if(day > a || (day==a && hour>b) || (day==a && hour==b && minute>c)) {
+            count = -1;
+            break;
+        }
         count++;
         minute++;
         if(minute == 60){
