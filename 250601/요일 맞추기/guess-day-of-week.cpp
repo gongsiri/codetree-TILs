@@ -5,7 +5,7 @@ using namespace std;
 
 int m1, d1, m2, d2;
 
-int min(int a1, int a2, int b1, int b2){
+int minFunc(int a1, int a2, int b1, int b2){
     if(a1 > b1){
         return 2;
     } else if(a1 ==b1){
@@ -26,34 +26,32 @@ int main() {
     int month;
     int day;
     int count = 0;  
-    
-    if(min(m1,d1,m2,d2)==1){
+    if(minFunc(m1,d1,m2,d2)==1){
         month = m1;
         day = d1;
-
         while(true){
             if(month == m2 && day == d2) break;
             day++;
             count++;
             if(day>days[month]){
                 month++;
-                day = 0;
+                day = 1;
             }
         }
         cout<<results[count%7];
     }else{ 
-        month = m2;
-        day = d2;
+        month = m1;
+        day = d1;
         while(true){
-            if(month == m1 && day == d1) break;
-            day++;
+            if(month == m2 && day == d2) break;
+            day--;
             count++;
-            if(day>days[month]){
-                month++;
-                day = 0;
+            if(day==0){
+                month--;
+                day = days[month];
             }
         }
-        cout<<results[7-count%7];
+        cout<<results[(7-(count%7))%7];
     }
     // Please write your code here.
 
