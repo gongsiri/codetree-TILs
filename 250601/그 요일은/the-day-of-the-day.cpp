@@ -18,7 +18,7 @@ int main() {
     int count = 0;
 
     while(true){
-        if(month == m2 && day == 2) break;
+        if(month == m2 && day == d2) break;
         day++;
         count++;
         if(day>days[month]){
