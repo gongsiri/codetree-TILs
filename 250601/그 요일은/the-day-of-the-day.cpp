@@ -6,7 +6,7 @@ int main() {
     // Please write your code here.
     int m1,d1,m2,d2;
     string A;
-    int days[13] = {0,31,30,31,30,31,30,31,31,30,31,30,31};
+    int days[13] = {0,31,29,31,30,31,30,31,31,30,31,30,31};
     string week[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
 
 
