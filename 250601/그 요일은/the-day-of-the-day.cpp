@@ -18,7 +18,7 @@ int main() {
     int count = 0;
 
     while(true){
-        if(month == m2 && day == d2) break;
+        if(month == m2 && day == 2) break;
         day++;
         count++;
         if(day>days[month]){
@@ -28,7 +28,7 @@ int main() {
     }
 
     int ans = 0;
-    for(int i=0; i<count; i++){
+    for(int i=0; i<=count; i++){
         if (week[i % 7] == A) ans++;
     }
     cout<<ans;
