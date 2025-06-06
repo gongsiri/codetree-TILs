@@ -29,7 +29,7 @@ int main() {
         }
     }
 
-    cout<<area
+    cout<<area;
     // Please write your code here.
 
     return 0;
