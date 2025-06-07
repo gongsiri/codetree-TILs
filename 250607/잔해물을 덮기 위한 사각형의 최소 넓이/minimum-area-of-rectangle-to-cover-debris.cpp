@@ -30,7 +30,11 @@ int main() {
             }
         }
     }
+    
     int area = (max_x - min_x+1) * (max_y- min_y+1);
+    if(min_x==2001 && max_x==-1 && min_y==2001 && max_y==-1){
+        area = 0;
+    }
     cout<<area;
     // Please write your code here.
 
