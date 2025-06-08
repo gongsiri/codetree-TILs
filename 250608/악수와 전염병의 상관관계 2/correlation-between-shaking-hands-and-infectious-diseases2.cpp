@@ -34,7 +34,7 @@ int main() {
     Case cases[250];
     cin >> N >> K >> P >> T;
 
-    arr[K-1] = 3;
+    arr[P-1] = K+1;
 
     for (int i = 0; i < T; i++) {
         cin >> t[i] >> x[i] >> y[i];
@@ -44,13 +44,13 @@ int main() {
     sort(cases, cases+T, cmp);
 
     for(int i=0; i<T; i++){
-        if(arr[K-1]!=1){
-            if(cases[i].x==K){
+        if(arr[P-1]!=1){
+            if(cases[i].x==P){
                 arr[cases[i].y-1] = 1;
-                arr[K-1]--;
-            } else if(cases[i].y==K){
+                arr[P-1]--;
+            } else if(cases[i].y==P){
                 arr[cases[i].x-1] = 1;
-                arr[K-1]--;
+                arr[P-1]--;
             }
         }
     }
