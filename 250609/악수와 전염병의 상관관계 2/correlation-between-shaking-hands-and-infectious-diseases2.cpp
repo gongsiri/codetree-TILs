@@ -3,12 +3,12 @@
 using namespace std;
 
 int N, K, P, T;
-int t[250];
-int x[250];
-int y[250];
+int t;
+int x;
+int y;
 
-int Flagcount[99] = {0};
-bool isFlag[99] = {false};
+int Flagcount[251] = {0};
+bool isFlag[101] = {false};
 
 class Case{
     public:
@@ -37,8 +37,8 @@ int main() {
     isFlag[P-1] = true; //감염여부
 
     for (int i = 0; i < T; i++) {
-        cin >> t[i] >> x[i] >> y[i];
-        cases[i] = Case(t[i],x[i],y[i]);
+        cin >> t >> x >> y;
+        cases[i] = Case(t,x,y);
     }
 
     sort(cases, cases+T, cmp);
