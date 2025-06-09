@@ -7,22 +7,21 @@ int t[250];
 int x[250];
 int y[250];
 
-int arr[99] = {0};
+int Flagcount[99] = {0};
+bool isFlag[99] = {false};
 
 class Case{
     public:
         int t;
         int x;
         int y;
-        int num;
         
         Case() {} 
 
-        Case(int t, int x, int y, int num){
+        Case(int t, int x, int y){
             this->t = t;
-            this->x = x;
-            this->y = y;
-            this->num = num;
+            this->x = x-1;
+            this->y = y-1;
         }
 };
 
@@ -34,29 +33,39 @@ int main() {
     Case cases[250];
     cin >> N >> K >> P >> T;
 
-    arr[P-1] = K+1;
+    Flagcount[P-1] = K; //감염횟수
+    isFlag[P-1] = true; //감염여부
 
     for (int i = 0; i < T; i++) {
         cin >> t[i] >> x[i] >> y[i];
-        cases[i] = Case(t[i],x[i],y[i],i);
+        cases[i] = Case(t[i],x[i],y[i]);
     }
 
     sort(cases, cases+T, cmp);
 
     for(int i=0; i<T; i++){
-        if(arr[P-1]>1){
-            if(cases[i].x==P){
-                arr[cases[i].y-1] = 1;
-                arr[P-1]--;
-            } else if(cases[i].y==P){
-                arr[cases[i].x-1] = 1;
-                arr[P-1]--;
+        int x = cases[i].x;
+        int y = cases[i].y;
+
+        if(Flagcount[x]>0 && isFlag[x]){
+            Flagcount[x]--;
+            if(!isFlag[y]){
+                isFlag[y] = true;
+                Flagcount[y]  = K;
+            }
+        }
+
+        if(Flagcount[y]>0 && isFlag[y]){
+            Flagcount[y]--;
+            if(!isFlag[x]){
+                isFlag[x] = true;
+                Flagcount[x] = K;
             }
         }
     }
 
     for(int i=0; i<N; i++){
-        cout<<arr[i];
+        cout<<isFlag[i];
     }
 
     // Please write your code here.
