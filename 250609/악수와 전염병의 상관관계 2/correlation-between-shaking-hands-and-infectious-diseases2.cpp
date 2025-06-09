@@ -50,7 +50,7 @@ int main() {
         bool primaryFlagy = isFlag[y];
         bool primaryFlagx = isFlag[x];
 
-        if(Flagcount[x]>0 && isFlag[x]){
+        if(Flagcount[x]>0 && primaryFlagx){
             Flagcount[x]--;
             if(!primaryFlagy){
                 isFlag[y] = true;
@@ -58,7 +58,7 @@ int main() {
             }
         }
 
-        if(Flagcount[y]>0 && isFlag[y]){
+        if(Flagcount[y]>0 && primaryFlagy){
             Flagcount[y]--;
             if(!primaryFlagx){
                 isFlag[x] = true;
