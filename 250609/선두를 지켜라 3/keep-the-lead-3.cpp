@@ -39,7 +39,8 @@ int main() {
         }
     }
 
-    for(int i=0; i<1000001; i++){
+    int maxTime = max(curTimeA,curTimeB);
+    for(int i=1; i<=maxTime; i++){
         if(locationA[i]>locationB[i]) {
             win[i] = 1;
         }
@@ -50,14 +51,14 @@ int main() {
         }
     }
 
-    int count =0;
-    for(int i=1; i<1000001; i++){
+    int count = 0;
+    for(int i=1; i<=maxTime; i++){
         if(win[i]!=win[i-1]){
             count++;
         }
     }
 
-    cout<<count-1;
+    cout<<count;
     // Please write your code here.
 
     return 0;
