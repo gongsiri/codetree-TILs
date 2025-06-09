@@ -6,9 +6,9 @@ int N, M;
 int v1, t1;
 int v2, t2;
 
-int locationA[1000] = {0};
-int locationB[1000] = {0};
-int win[1000] = {0}; //0 비김, 1 a win, 2 b win
+int locationA[1000001] = {0};
+int locationB[1000001] = {0};
+int win[1000001] = {0}; //0 비김, 1 a win, 2 b win
 
 int main() {
     cin >> N >> M;
