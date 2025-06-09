@@ -47,9 +47,12 @@ int main() {
         int x = cases[i].x;
         int y = cases[i].y;
 
+        bool primaryFlagy = isFlag[y];
+        bool primaryFlagx = isFlag[x];
+
         if(Flagcount[x]>0 && isFlag[x]){
             Flagcount[x]--;
-            if(!isFlag[y]){
+            if(!primaryFlagy){
                 isFlag[y] = true;
                 Flagcount[y]  = K;
             }
@@ -57,7 +60,7 @@ int main() {
 
         if(Flagcount[y]>0 && isFlag[y]){
             Flagcount[y]--;
-            if(!isFlag[x]){
+            if(!primaryFlagx){
                 isFlag[x] = true;
                 Flagcount[x] = K;
             }
