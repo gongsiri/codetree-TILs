@@ -7,7 +7,7 @@ int grid[100][100];
 int dx[4] = {0,1,0,-1}, dy[4] = {1,0,-1,0};
 
 bool IsRange(int x, int y){
-    return (0<=x && x<5 && 0<=y && y<5);
+    return (0<=x && x<n && 0<=y && y<n);
 }
 
 int main() {
