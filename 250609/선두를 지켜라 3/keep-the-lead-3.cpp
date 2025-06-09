@@ -39,7 +39,7 @@ int main() {
         }
     }
 
-    for(int i=0; i<1000; i++){
+    for(int i=0; i<1000001; i++){
         if(locationA[i]>locationB[i]) {
             win[i] = 1;
         }
@@ -51,7 +51,7 @@ int main() {
     }
 
     int count =0;
-    for(int i=1; i<1000; i++){
+    for(int i=1; i<1000001; i++){
         if(win[i]!=win[i-1]){
             count++;
         }
